@@ -1,0 +1,41 @@
+Dva velika prim broja su p i q.
+n = p*q
+
+l(n) = lcm(p-1, q-1)
+l(n) ostaje tajan
+
+odaberi e: 2 < e < l(n)  &&  gcd(e, l(n)) == 1    (tj. e i l(n) su "coprime")
+najcesci e je 65537
+najmanji e je 3
+e je dio javnog kljuca
+
+de = 1 (mod l(n))  // matematicka notacija
+d = [ l(n)*i + 1 ] / e
+gdje je [ ... ] djeljiv sa e
+d ostaje tajan
+
+notes:
+l(n) moze biti (p - 1)(q - 1) // i dalje radi
+(p - 1) i (q - 1) trebaju imati sto manje zajednickih faktora (2 zagarantirana)
+
+
+
+
+osoba1 -> osoba2
+
+ENKRIPCIJA:
+osoba2 -> osoba1
+     (n,e)
+
+encript = poruka^e % n
+
+DEKRIPCIJA:
+poruka = encript^d % n
+
+
+
+
+
+
+lcm - least common multiple
+gcd - greatest common divisor
